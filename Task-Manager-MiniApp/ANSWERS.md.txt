@@ -1,0 +1,99 @@
+# ANSWERS.md
+
+---
+
+# 1. How to run
+
+## Backend
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+Create a `.env` file inside backend:
+
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://salman:Bsit21205+@cluster0.ayubfde.mongodb.net/?appName=Cluster0
+```
+
+---
+
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Create a `.env` file inside frontend:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+
+```
+
+---
+
+# 2. Stack choice
+
+I chose the MERN stack (MongoDB, Express, React, Node.js) because it allows fast full-stack development using JavaScript across both frontend and backend.
+
+React was useful for building reusable UI components and handling dynamic state updates for task creation, editing, filtering, and search.
+
+Express and MongoDB provided a simple and flexible backend structure for CRUD operations.
+
+Tailwind CSS helped speed up responsive UI development while keeping styling organized.
+
+A worse choice for this task would have been a heavier enterprise framework such as Java Spring Boot because it would increase setup complexity and development time for a relatively small CRUD-focused application.
+
+---
+
+# 3. One real edge case
+
+The application correctly handles overdue tasks.
+
+File:
+
+```txt
+frontend/src/components/TaskCard.jsx
+```
+
+Logic:
+
+```js
+const isOverdue =
+  new Date(task.dueDate) < new Date() &&
+  task.status !== "completed";
+```
+
+This ensures completed tasks are not incorrectly marked as overdue even if the due date has passed.
+
+Without this handling, completed tasks would still display an overdue badge, creating incorrect task status behavior and confusing the user.
+
+---
+
+# 4. AI usage
+
+I used ChatGPT to assist with:
+
+- Initial project planning
+- React component structuring
+- Tailwind CSS styling ideas
+- CRUD integration guidance
+- Framer Motion animation setup
+- README structure suggestions
+
+
+---
+
+# 5. Honest gap
+
+One area that is not fully complete is drag-and-drop task reordering.
+
+The UI and application structure are prepared for it, but a full implementation with persistent ordering in the database was not completed within the available time.
+
+With another day, I would implement drag-and-drop using dnd-kit, persist task ordering in MongoDB, and add smooth animated transitions during reordering.
