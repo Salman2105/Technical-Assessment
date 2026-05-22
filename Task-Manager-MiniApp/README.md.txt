@@ -175,6 +175,62 @@ http://localhost:5173
 
 ---
 
+
+# Validation Handling
+
+The application includes basic frontend and backend validation to ensure valid task data.
+
+## Task Title Validation
+
+- Title is required
+- Empty or whitespace-only titles are rejected
+
+Example:
+
+```js
+if (!formData.title.trim()) {
+  return alert("Title is required");
+}
+```
+
+This prevents users from creating blank tasks.
+
+---
+
+## Description Validation
+
+- Description field supports optional detailed task information
+- Long descriptions are displayed safely inside responsive task cards
+
+---
+
+## Due Date Validation
+
+- Overdue tasks are automatically detected
+- Completed tasks are excluded from overdue warnings
+
+Example:
+
+```js
+const isOverdue =
+  new Date(task.dueDate) < new Date() &&
+  task.status !== "completed";
+```
+
+This prevents completed tasks from being incorrectly marked as overdue.
+
+---
+
+## Status Validation
+
+Allowed task statuses:
+
+- Pending
+- In Progress
+- Completed
+
+This ensures consistent filtering and UI behavior throughout the application.
+
 # Future Improvements
 
 - Authentication
