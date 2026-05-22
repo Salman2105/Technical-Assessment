@@ -4,12 +4,12 @@ export default function Navbar({
   taskCount,
 }) {
   return (
-    <nav className="border-b bg-white dark:bg-gray-900 px-6 py-4 shadow-sm dark:bg-gray-900">
+    <nav className="border-b bg-white dark:bg-gray-800 px-6 py-4 shadow-sm dark:bg-gray-900">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         
         {/* Logo */}
         <div>
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
             Task Manager
           </h1>
           <p className="text-sm text-gray-500">

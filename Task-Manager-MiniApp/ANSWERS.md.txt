@@ -32,6 +32,7 @@ npm run dev
 Create a `.env` file inside frontend:
 
 ```env
+
 VITE_API_URL=http://localhost:5000/api
 
 ```
@@ -96,4 +97,4 @@ One area that is not fully complete is drag-and-drop task reordering.
 
 The UI and application structure are prepared for it, but a full implementation with persistent ordering in the database was not completed within the available time.
 
-With another day, I would implement drag-and-drop using dnd-kit, persist task ordering in MongoDB, and add smooth animated transitions during reordering.
+With another day, I would implement drag-and-drop using dnd-kit, persist task ordering in MongoDB, and add smooth animated transitions during reordering. Hopefully i will complete the whole project soon

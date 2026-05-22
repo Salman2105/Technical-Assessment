@@ -6,7 +6,7 @@ export default function FilterBar({
     <select
       value={filter}
       onChange={(e) => setFilter(e.target.value)}
-      className="rounded-xl border border-gray-300 bg-white dark:bg-gray-900 px-4 py-3 outline-none focus:border-black"
+      className="rounded-xl border border-gray-300 bg-white dark:bg-gray-800 px-4 py-3 outline-none focus:border-black"
     >
       <option value="all">All Tasks</option>
       <option value="pending">Pending</option>

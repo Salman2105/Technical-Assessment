@@ -128,7 +128,7 @@ export default function Dashboard () {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-60 dark:bg-black dark:bg-gray-900">
       <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
@@ -141,7 +141,7 @@ export default function Dashboard () {
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           
           <div>
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               Your Tasks
             </h2>
 

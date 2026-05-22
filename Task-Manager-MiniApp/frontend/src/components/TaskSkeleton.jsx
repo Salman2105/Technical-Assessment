@@ -1,6 +1,6 @@
 export default function TaskSkeleton() {
   return (
-    <div className="animate-pulse rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-sm">
+    <div className="animate-pulse rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm">
       
       <div className="mb-4 h-5 w-2/3 rounded bg-gray-200"></div>
 
